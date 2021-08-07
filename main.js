@@ -1,3 +1,4 @@
+/* mobile menu toggle*/
 const nav = document.querySelector('header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
@@ -20,13 +21,13 @@ for (const link of links) {
 const header = document.querySelector('#header1')
 const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function () {
+function changeHeaderWhenScroll () {
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
-})
+}
 
 /*TESTIMONIAL SWIPER*/
 const swiper = new Swiper('.swiper-container', {
@@ -64,14 +65,15 @@ scrollReveal.reveal(
 )
 
 /*back to top button*/
-const backToTopButton = document.querySelector('.back-to-top')
-window.addEventListener('scroll', function () {
+
+function backToTop (){
+  const backToTopButton = document.querySelector('.back-to-top')
   if (window.scrollY > 2500) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
   }
-})
+}
 
 /*ACTIVED MENU LINK*/
 const sections = document.querySelectorAll('section[id]')
@@ -99,15 +101,10 @@ function activeMenuLinkStyleAtRespecitveSection() {
   }
 }
 
-window.addEventListener('scroll', function () {
-  activeMenuLinkStyleAtRespecitveSection()
-})
 
-/* When Scroll */
-/* 
+/* When Scroll functions*/
 window.addEventListener('scroll', function () {
-  changeHeaderWhenScroll()
-  backToTop()
   activeMenuLinkStyleAtRespecitveSection()
+  backToTop()
+  changeHeaderWhenScroll ()
 })
-*/
