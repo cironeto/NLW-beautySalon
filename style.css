@@ -279,6 +279,7 @@ nav.show div.icon-close {
 
 #home .image {
   position: relative;
+  border-radius: 0.25rem;
 }
 
 #home .image::before {
@@ -290,10 +291,6 @@ nav.show div.icon-close {
   top: -16.8%;
   left: 16.8%;
   z-index: 0;
-}
-
-#home .image,
-#home .image::before {
   border-radius: 0.25rem;
 }
 
@@ -538,9 +535,15 @@ footer .social a:hover {
   transform: translateY(0);
 }
 
-/* ========= RESPONSIVE (MEDIA QUERIES) =========*/
-/*extra large devices >=1200*/
-@media (min-width: 1200px) {
+/* =================== RESPONSIVE (MEDIA QUERIES) ===================*/
+/* large devices >=992*/
+
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+
   .container {
     max-width: 1120px;
     margin-left: auto;
@@ -665,12 +668,40 @@ footer .social a:hover {
   }
 }
 
-/* large devices >=1023*/
-/* large devices >=992*/
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
+/* medium devices >=767 and <= 991px*/
+
+@media (min-width: 767px) and (max-width: 991px) {
+  * {
+    border: px solid;
+  }
+
+  .logo,
+  .icon-menu,
+  .icon-close {
+    font-size: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 700 2.5rem var(--title-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #home .image {
+    width: 70%;
+    margin: auto;
+    display: block;
+  }
+
+  #home .image::before {
+    top: -10%;
+    left: 10%;
+  }
+
+  .button {
+    font-size: 1.3rem;
+    margin: auto;
+    width: 400px;
+    padding-left: 100px;
+    /* ==================mudar aqui?*/
   }
 }
-/* medium devices >=767*/
