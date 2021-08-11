@@ -671,10 +671,6 @@ footer .social a:hover {
 /* medium devices >=767 and <= 991px*/
 
 @media (min-width: 767px) and (max-width: 991px) {
-  * {
-    border: px solid;
-  }
-
   .logo,
   .icon-menu,
   .icon-close {
@@ -686,10 +682,16 @@ footer .social a:hover {
     -webkit-font-smoothing: antialiased;
   }
 
-  #home .image {
+  #home .image,
+  #about .image {
     width: 70%;
     margin: auto;
     display: block;
+  }
+
+  #about .image::before {
+    top: -10%;
+    padding-right: 10%;
   }
 
   #home .image::before {
