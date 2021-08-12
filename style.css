@@ -312,9 +312,6 @@ nav.show div.icon-close {
 
 #about {
   background-color: white;
-}
-
-#about {
   overflow: hidden;
   margin-top: 1rem;
 }
@@ -458,6 +455,7 @@ nav.show div.icon-close {
 #contact ul li i {
   font-size: 1.5rem;
   margin-right: 0.625rem;
+  color: var(--base-color);
 }
 
 #contact ul.grid {
@@ -467,10 +465,6 @@ nav.show div.icon-close {
 #contact ul li {
   display: flex;
   align-items: center;
-}
-
-#contact ul li i {
-  color: var(--base-color);
 }
 
 /* ========= FOOTER =========*/
